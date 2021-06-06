@@ -1,0 +1,74 @@
+/*Hasta smartphones y telefonos pequeños*/
+@media only screen 
+and (min-device-width : 0) 
+and (max-device-width : 550px) {
+    .item-logo-header, .item-footer-2{
+        order: 1;
+    }
+    .item-footer-1, .item-titulo{
+        order: 2;
+    }
+    .item-logo-header{
+        min-width: 120px;
+        min-height: 120px;
+        max-width: 120px;
+        max-height: 120px;
+        background-size: 115px 115px;
+        grid-row: 2;
+    }
+    #white-circle{
+        clip-path: circle(90% at 50% 0);
+        background-color: white;
+        background-image: none;
+        animation: inicio-glob-mobile 1s;
+    }
+    .item-titulo, .item-logo-header, .item-arrow{
+        grid-column: 1 / -1;
+    }
+    .item-titulo{
+        text-align: center;
+    }
+
+}
+/* Hasta smartphone medianos/grandes*/
+@media only screen 
+and (min-device-width : 0) 
+and (max-device-width : 800px) {
+    .grid-main, .grid-sidebar{
+        grid-column: 1 / -1;
+    }
+    .item{
+        flex: 0 1 95%;
+    }
+}
+@media only screen 
+and (min-device-width : 800px) 
+and (max-device-width : 1200px) {
+    .grid-main{
+        grid-column: 1 / 14;
+    }
+    .grid-sidebar{
+        grid-column: 14 / -1;
+    }
+}
+/*Pantallas grandes*/
+@media only screen 
+and (min-device-width : 1800px) {
+    .grid-main{
+        grid-column: 3 / 14;
+    }
+    .grid-sidebar{
+        grid-column: 14 / 17;
+    }
+}
+/*Pantallas MUY grandes*/
+@media only screen 
+and (min-device-width : 3000px) {
+    .grid-main{
+        grid-column: 5 / 13;
+    }
+    .grid-sidebar{
+        grid-column: 13 / 15;
+    }
+
+}

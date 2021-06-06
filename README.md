@@ -1,4 +1,4 @@
-# greendale-swp
+# greendale
 
 ## Project setup
 ```

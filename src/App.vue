@@ -1,26 +1,51 @@
 <template>
-  <img alt="Vue logo" src="./assets/logo.png">
-  <HelloWorld msg="Welcome to Your Vue.js App"/>
+  <HeroContent/>
+  <div class="grid-entero sticky">
+    <nav>
+      <div class="nav-container">
+        <router-link v-for="item in items" v-bind:to="item.link" v-bind:alt="item.title" v-bind:key="item" v-bind:item="item" class="item-nav">{{item.title}}</router-link>
+      </div>
+    </nav>
+  </div>
+  <router-view/>
+  <FooterContent/>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import HeroContent from '@/components/HeroContent.vue'
+import FooterContent from '@/components/FooterContent.vue'
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  }
-}
+export default ({
+    components: {
+      HeroContent,
+      FooterContent,
+    },
+    data: function(){
+      return{
+          items:[
+              {
+                  title: 'Inicio',
+                  link: '/',
+              },
+                {
+                  title: 'Carreras',
+                  link: '/carreras',
+              },
+                {
+                  title: 'Acceso Campus',
+                  link: '/campus',
+              },
+                {
+                  title: 'Nostros',
+                  link: '/nosotros',
+              },
+                {
+                  title: 'Contacto',
+                  link: '/contacto',
+              },
+          ]
+      }
+  },
+})
 </script>
 
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
-}
-</style>
