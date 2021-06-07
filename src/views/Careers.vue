@@ -1,9 +1,7 @@
 <template>
-  <div class="careers grid">
     <router-view/>
     <CareersComponent/>
     <Sidebar/>
-  </div>
 </template>
 
 <script>

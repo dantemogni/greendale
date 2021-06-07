@@ -9,21 +9,21 @@ and (max-device-width : 550px) {
         order: 2;
     }
     .item-logo-header{
-        min-width: 120px;
-        min-height: 120px;
-        max-width: 120px;
-        max-height: 120px;
-        background-size: 115px 115px;
-        grid-row: 2;
+        min-width: 120px !important;
+        min-height: 120px !important;
+        max-width: 120px !important;
+        max-height: 120px !important;
+        background-size: 115px 115px !important;
+        grid-row: 2 !important;
     }
     #white-circle{
         clip-path: circle(90% at 50% 0);
         background-color: white;
-        background-image: none;
-        animation: inicio-glob-mobile 1s;
+        background-image: none !important;
+        animation: inicio-glob-mobile 1s !important;
     }
     .item-titulo, .item-logo-header, .item-arrow{
-        grid-column: 1 / -1;
+        grid-column: 1 / -1 !important;
     }
     .item-titulo{
         text-align: center;

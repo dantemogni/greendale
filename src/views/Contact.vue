@@ -1,8 +1,6 @@
 <template>
-  <div class="grid">
     <router-view/>
     <ContactComponent/>
-  </div>
 </template>
 
 <script>

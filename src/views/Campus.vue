@@ -1,8 +1,6 @@
 <template>
-  <div class="grid">
     <router-view/>
     <CampusComponent/>
-  </div>
 </template>
 
 <script>

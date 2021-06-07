@@ -1,10 +1,8 @@
 <template>
-  <div class="home grid">
     <!--<NavBar page="Inicio"/>-->
     <router-view/>
     <MainArticles/>
     <Sidebar/>
-  </div>
 </template>
 
 <script>

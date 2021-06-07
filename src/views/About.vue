@@ -1,9 +1,7 @@
 <template>
-  <div class="about grid">
     <router-view/>
     <AboutUsComponent/>
     <Sidebar/>
-  </div>
 </template>
 
 <script>

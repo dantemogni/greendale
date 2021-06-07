@@ -1,14 +1,16 @@
 <template>
-  <HeroContent/>
-  <div class="grid-entero sticky">
-    <nav>
-      <div class="nav-container">
-        <router-link v-for="item in items" v-bind:to="item.link" v-bind:alt="item.title" v-bind:key="item" v-bind:item="item" class="item-nav">{{item.title}}</router-link>
-      </div>
-    </nav>
+  <div class="grid">
+    <HeroContent/>
+    <div class="grid-entero sticky">
+      <nav>
+        <div class="nav-container">
+          <router-link v-for="item in items" v-bind:to="item.link" v-bind:alt="item.title" v-bind:key="item" v-bind:item="item" class="item-nav">{{item.title}}</router-link>
+        </div>
+      </nav>
+    </div>
+    <router-view/>
+    <FooterContent/>
   </div>
-  <router-view/>
-  <FooterContent/>
 </template>
 
 <script>
@@ -36,7 +38,7 @@ export default ({
                   link: '/campus',
               },
                 {
-                  title: 'Nostros',
+                  title: 'Nosotros',
                   link: '/nosotros',
               },
                 {
