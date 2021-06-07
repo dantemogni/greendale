@@ -1,6 +1,6 @@
 <template>
     <router-view/>
-    <CampusComponent/>
+    <CampusComponent id="campus"/>
 </template>
 
 <script>
@@ -18,7 +18,7 @@ export default {
 }
 </script>
 <style scoped>
-    .grid{
+    #campus{
         background: white;
     }
 </style>

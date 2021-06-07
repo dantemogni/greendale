@@ -1,6 +1,6 @@
 <template>
     <router-view/>
-    <ContactComponent/>
+    <ContactComponent id="contact"/>
 </template>
 
 <script>
@@ -18,7 +18,7 @@ export default {
 }
 </script>
 <style scoped>
-    .grid{
+    #contact{
         background: white;
     }
 </style>
