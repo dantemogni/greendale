@@ -28,6 +28,10 @@ and (max-device-width : 550px) {
     .item-titulo{
         text-align: center;
     }
+    .slide-enter-active,
+    .slide-leave-active {
+    transition: none;
+}
 
 }
 /* Hasta smartphone medianos/grandes*/
