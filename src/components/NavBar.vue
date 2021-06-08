@@ -2,7 +2,7 @@
     <div class="grid-entero sticky">
             <nav>
                 <div class="nav-container">
-                    <router-link v-for="item in items" v-bind:to="item.link" v-bind:alt="item.title" v-bind:key="item" v-bind:item="item" class="item-nav" v-bind:class="{active:page===item.title}">{{item.title}}</router-link>
+                    <router-link v-for="item in items" v-bind:to="item.link" v-bind:alt="item.title" v-bind:key="item" v-bind:item="item" class="item-nav">{{item.title}}</router-link>
                 </div>
             </nav> 
         </div>
@@ -11,12 +11,6 @@
 <script>
 export default {
   name: 'NavBar',
-  props:{
-      page:{
-        type: String,
-        default: 'Inicio',
-        },
-    },
   data: function(){
       return{
           items:[
@@ -33,12 +27,12 @@ export default {
                   link: '/campus',
               },
                 {
-                  title: 'Acerca De',
-                  link: '/acerca',
+                  title: 'Nosotros',
+                  link: '/nosotros',
               },
                 {
                   title: 'Contacto',
-                  link: '/contact',
+                  link: '/contacto',
               },
           ]
       }

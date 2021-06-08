@@ -1,26 +1,26 @@
 <template>
-    <main class="grid-main">
-            <section class="main-container">
-                <article class="item item-1">
-                    <header class="article-header">
-                        <h2>Estudiantes destacados</h2>
-                    </header>
-                    <div class="students-container">
-                        <div class="item-students" v-for="st in students" v-bind:key="st.id" v-bind:st="st">
-                            <img v-bind:src="st.image" width="200" height="200" alt="Estudiante">
-                            <h3>{{st.studentName}}</h3>
-                            <p>{{st.studentDescription}}</p>
+        <main class="grid-main">
+                <section class="main-container">
+                    <article class="item item-1">
+                        <header class="article-header">
+                            <h2>Estudiantes destacados</h2>
+                        </header>
+                        <div class="students-container">
+                            <div class="item-students" v-for="st in students" v-bind:key="st.id" v-bind:st="st">
+                                <img v-bind:src="st.image" width="200" height="200" alt="Estudiante">
+                                <h3>{{st.studentName}}</h3>
+                                <p>{{st.studentDescription}}</p>
+                            </div>
                         </div>
-                    </div>
-                </article>
-                <article class="item" v-for="post in posts" v-bind:key="post.id" v-bind:post="post">
-                    <header class="article-header">
-                        <h2>{{post.title}}</h2>
-                    </header>
-                    <p>{{post.content}}</p>
-                </article>
-            </section>
-        </main>
+                    </article>
+                    <article class="item" v-for="post in posts" v-bind:key="post.id" v-bind:post="post">
+                        <header class="article-header">
+                            <h2>{{post.title}}</h2>
+                        </header>
+                        <p>{{post.content}}</p>
+                    </article>
+                </section>
+            </main>
 </template>
 
 <script>

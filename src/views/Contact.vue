@@ -1,6 +1,7 @@
 <template>
-    <router-view/>
-    <ContactComponent id="contact"/>
+    <transition appear name="scale" mode="out-in">
+      <ContactComponent id="contact"/>
+    </transition>
 </template>
 
 <script>

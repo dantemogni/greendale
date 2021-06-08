@@ -1,53 +1,63 @@
 <template>
   <div class="grid">
     <HeroContent/>
-    <div class="grid-entero sticky">
-      <nav>
-        <div class="nav-container">
-          <router-link v-for="item in items" v-bind:to="item.link" v-bind:alt="item.title" v-bind:key="item" v-bind:item="item" class="item-nav">{{item.title}}</router-link>
-        </div>
-      </nav>
-    </div>
+    <NavBar/>
+
     <router-view/>
+    <transition appear name="slide" mode="out-in">
+      <Sidebar v-if="['Contact', 'Campus'].indexOf($route.name) == -1"/>
+    </transition>
     <FooterContent/>
-  </div>
+   </div>
 </template>
 
 <script>
 import HeroContent from '@/components/HeroContent.vue'
 import FooterContent from '@/components/FooterContent.vue'
+import NavBar from '@/components/NavBar.vue'
+import Sidebar from '@/components/Sidebar.vue'
+
 
 export default ({
     components: {
       HeroContent,
+      NavBar,
+      Sidebar,
       FooterContent,
     },
-    data: function(){
-      return{
-          items:[
-              {
-                  title: 'Inicio',
-                  link: '/',
-              },
-                {
-                  title: 'Carreras',
-                  link: '/carreras',
-              },
-                {
-                  title: 'Acceso Campus',
-                  link: '/campus',
-              },
-                {
-                  title: 'Nosotros',
-                  link: '/nosotros',
-              },
-                {
-                  title: 'Contacto',
-                  link: '/contacto',
-              },
-          ]
-      }
-  },
 })
 </script>
 
+<style>
+.scale-enter-active,
+.scale-leave-active {
+  transition: all 0.3s ease;
+}
+
+
+.scale-enter-from,
+.scale-leave-to {
+  opacity: 0;
+  transform: scale(0.97);
+}
+
+.slide-enter-active {
+  transition: all 0.5s ease;
+}
+.slide-leave-active{
+   display: none;
+
+}
+
+.slide-enter-to, .slide-leave-from  {
+  position: relative;
+  right: 0;
+}
+
+
+.slide-enter-from, .slide-leave-to {
+  position: relative;
+  right: -35%;
+}
+
+</style>

@@ -1,6 +1,7 @@
 <template>
-    <router-view/>
-    <CampusComponent id="campus"/>
+    <transition appear name="scale" mode="out-in">
+      <CampusComponent id="campus"/>
+    </transition>
 </template>
 
 <script>
