@@ -30,7 +30,7 @@ and (max-device-width : 550px) {
     }
     .slide-enter-active,
     .slide-leave-active {
-    transition: none;
+    transition: none !important;
 }
 
 }
