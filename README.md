@@ -4,6 +4,8 @@
 
 Live demo: [greendale-spa.netlify.app](https://greendale-spa.netlify.app)
 
+## Trabajo práctico Codo a Codo 4.0, reformulado a una single page app usando Vue.js
+
 ## Project setup
 ```
 npm install
